@@ -10,9 +10,14 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var car:Car
+
+    @Inject
+    lateinit var main: Main
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        main.getName()
 
         car.getCar()
     }
