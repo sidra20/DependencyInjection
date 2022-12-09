@@ -4,6 +4,7 @@ import android.util.Log
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.internal.managers.ApplicationComponentManager
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -26,12 +27,12 @@ class Main @Inject constructor(private val one: One)
     }
 }
 
-@Module
-@InstallIn(ApplicationComponentManager::class)
-abstract class Module {
-
-    @Binds
-    @Singleton
-    abstract fun binding(name: Name):One
-
-}
+//@Module
+//@InstallIn(ActivityComponent::class)
+//abstract class Module {
+//
+//    @Binds
+//    @Singleton
+//    abstract fun binding(name: Name):One
+//
+//}
